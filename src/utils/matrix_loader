@@ -1,0 +1,17 @@
+import json
+
+def load_universe_data(file_path):
+    with open(file_path, 'r') as file:
+        data = json.load(file)
+    return data
+
+def print_universe_info(data):
+    print(f"Tamaño de la matriz: {data['matriz']['filas']}x{data['matriz']['columnas']}")
+    print(f"Origen: {data['origen']}")
+    print(f"Destino: {data['destino']}")
+    print(f"Agujeros negros: {data['agujerosNegros']}")
+    print(f"Estrellas gigantes: {data['estrellasGigantes']}")
+    print(f"Agujeros de gusano: {data['agujerosGusano']}")
+    print(f"Zonas de recarga: {data['zonasRecarga']}")
+    print(f"Celdas con carga requerida: {data['celdasCargaRequerida']}")
+    print(f"Carga inicial: {data['cargaInicial']}")
